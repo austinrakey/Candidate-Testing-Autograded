@@ -51,18 +51,16 @@ function gradeQuiz(candidateAnswers) {
 // let lowerCandidateAnswers = candidateAnswers.map(toLowercase())
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 let score = 0
-// let lowerCorrect =
-// let lowerCandidate = 
   
   for (let i = 0; i < questions.length; i++)
       if (correctAnswers[i].toLowerCase() === candidateAnswers[i].toLowerCase()) {
       console.log(`Question ${i + 1} was correct!`);
-      score = score + 1
+      score = score + 1 
 } else {
       console.log(`Question ${i + 1} is incorrect you answered ${candidateAnswers[i]} but the correct answer was ${correctAnswers[i]}.`);
 }
 
-  let grade = (score*20);  //TODO 3.2 use this variable to calculate the candidates score.
+  let grade = ((score / questions.length) * 100);  //TODO 3.2 use this variable to calculate the candidates score.
 
   console.log(`Your final score is ${grade}.`)
 
