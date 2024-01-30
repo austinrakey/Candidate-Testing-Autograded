@@ -62,8 +62,11 @@ let score = 0
 
   let grade = ((score / questions.length) * 100);  //TODO 3.2 use this variable to calculate the candidates score.
 
-  console.log(`Your final score is ${grade}.`)
-
+if (grade >= 80) {
+  console.log(`PASSED: Your final score is ${grade}.`)
+} else {
+  console.log(`FAILED: Your final score is ${grade}. You need an 80 to pass.`)
+}
   return grade;
 }
 
